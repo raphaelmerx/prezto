@@ -14,5 +14,6 @@ source "$HOME/.profile"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/.pyenv/shims:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
