@@ -87,10 +87,8 @@ function prompt_sorin_precmd {
     kill -KILL "$_prompt_sorin_precmd_async_pid" &>/dev/null
   fi
 
-  # Get Python environment information.
-  if (( $+functions[python-info] )); then
-    python-info
-  fi
+  # Run python-info to get the venv name available in $python-info[virtualenv]
+  python-info
 
   # Compute slow commands in the background.
   trap prompt_sorin_git_info WINCH
@@ -111,8 +109,8 @@ function prompt_sorin_setup {
   # Add hook for calling git-info before each command.
   add-zsh-hook precmd prompt_sorin_precmd
 
-  # Python virtualenv format
-  zstyle ':prezto:module:python:info:virtualenv' format '%F{yellow}[%v]%f '
+  # Define a style for the virtualenv name
+  zstyle ':prezto:module:python:info:virtualenv' format '%F{yellow}(%v)%f '
 
   # Set editor-info parameters.
   zstyle ':prezto:module:editor:info:completing' format '%B%F{7}...%f%b'
