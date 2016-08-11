@@ -6,10 +6,3 @@
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
-
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-export CC=/usr/bin/clang
-export CXX=/usr/bin/clang++
-
-# virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
