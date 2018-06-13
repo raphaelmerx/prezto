@@ -112,7 +112,7 @@ alias gma='git merge --abort'
 alias gmt='git mergetool'
 
 # Push (p)
-alias gp='git push'
+alias gp='git push -u'
 alias gpf='git push --force'
 alias gpa='git push --all'
 alias gpA='git push --all && git push --tags'
@@ -148,9 +148,6 @@ alias gsL='git-stash-dropped'
 alias gsd='git stash show --patch --stat'
 alias gsp='git stash pop'
 alias gsr='git-stash-recover'
-alias gss='git stash save --include-untracked'
-alias gsS='git stash save --patch --no-keep-index'
-alias gsw='git stash save --include-untracked --keep-index'
 
 # Submodule (S)
 alias gS='git submodule'
@@ -176,6 +173,7 @@ alias gwC='git clean -f'
 alias gwx='git rm -r'
 alias gwX='git rm -rf'
 
+# my aliases
 alias gst='git status'
 alias gcm='git commit'
 alias gco='git checkout'
@@ -188,3 +186,7 @@ alias gbD='git branch -D'
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 alias gsh='git show'
+alias gtD='git tag --delete'
+alias gpr='open -a "Google Chrome" "`g remote get-url origin`compare/`git rev-parse --abbrev-ref HEAD`?expand=1"'
+alias gss='git stash show -p'
+
