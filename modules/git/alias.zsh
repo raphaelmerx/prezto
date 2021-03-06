@@ -187,6 +187,6 @@ alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 alias gsh='git show'
 alias gtD='git tag --delete'
-alias gpr='open -a "Google Chrome" "`g remote get-url origin`compare/`git rev-parse --abbrev-ref HEAD`?expand=1"'
+alias gpr='open -a "Firefox" "`g remote get-url origin`compare/`git rev-parse --abbrev-ref HEAD`?expand=1"'
 alias gss='git stash show -p'
 
