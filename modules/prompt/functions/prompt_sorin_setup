@@ -87,9 +87,6 @@ function prompt_sorin_precmd {
     kill -KILL "$_prompt_sorin_precmd_async_pid" &>/dev/null
   fi
 
-  # Run python-info to get the venv name available in $python-info[virtualenv]
-  python-info
-
   # Compute slow commands in the background.
   trap prompt_sorin_git_info WINCH
   prompt_sorin_precmd_async &!
